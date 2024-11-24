@@ -24,7 +24,7 @@ jobs:
 
     - name: Build and push Docker image
       run: |
-        docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/aws-front-app:latest .
+        docker build -t ${{ secrets.DOCKER_HUB_USERNAME }}/aws-front-app:latest ./front-app
         docker push ${{ secrets.DOCKER_HUB_USERNAME }}/aws-front-app:latest
 
     - name: Update Auto Scaling Group
