@@ -1,0 +1,12 @@
+# terraform.tfvars
+
+vpc_cidr_block        = "192.168.0.0/16"
+environment           = "development"
+owner                 = "dahit"
+ami_id                = "ami-080e1f13689e07408"
+instance_type         = "t2.micro"
+region                = "us-east-1"
+private_subnet_name   = ["app-subnet", "data-subnet"]
+internet_gateway_name = "gateway"
+key_name              = "dahit1" // use your key name
+nat_gateway_name      = "nat-gateway"

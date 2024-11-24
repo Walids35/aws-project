@@ -1,0 +1,23 @@
+enviroment_vars/
+# Ignore Terraform state files
+*.tfstate
+*.tfstate.backup
+terraform.tfstate
+terraform.tfstate.backup
+
+# Ignore .terraform directory
+.terraform/
+
+# Ignore .tfvars files containing sensitive information
+*.auto.tfvars
+*.tfvars
+
+# Ignore override files as they are usually used to override resources locally and do not need to be checked in
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Ignore CLI configuration files
+.terraformrc
+terraform.rc
