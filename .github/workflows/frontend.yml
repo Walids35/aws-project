@@ -3,7 +3,7 @@ name: Deploy Backend to AWS
 on:
   push:
     paths:
-      - 'back-app/**'
+      - 'front-app/**'
 
 jobs:
   deploy-backend:
