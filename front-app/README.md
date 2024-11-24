@@ -1,1 +1,1 @@
-# Next JS Application
+# Next JS Applications
