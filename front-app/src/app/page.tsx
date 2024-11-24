@@ -5,7 +5,7 @@ export default async function Home() {
     // Fetch data from the server
     try {
       const response = await fetch(
-        process.env.NEXT_PUBLIC_API_URL || "http://localhost:3500/"
+        process.env.API_URL || "http://localhost:3500/"
       );
       const data = await response.json();
       return data;
