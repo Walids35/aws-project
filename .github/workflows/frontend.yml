@@ -38,4 +38,7 @@ jobs:
       run: |
         aws autoscaling update-auto-scaling-group \
           --auto-scaling-group-name ${{ secrets.FRONTEND_ASG_NAME }} \
-          --launch-template LaunchTemplateId=lt-003046c786d37e0d7,Version=6
+          --launch-template "LaunchTemplateName=frontend-launch-config,Version=$Latest"
+
+        aws ec2 describe-instances --query "Reservations[*].Instances[*].InstanceId" --filters "Name=subnet-id,Values=subnet-0dc2ea60a7eb116ce" --output text | \
+          xargs -I {} aws ec2 terminate-instances --instance-ids {}

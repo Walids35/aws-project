@@ -30,6 +30,8 @@ jobs:
     - name: Update Auto Scaling Group
       run: |
         aws autoscaling update-auto-scaling-group \
-          --auto-scaling-group-name ${{ secrets.BACKEND_ASG_NAME }} \
-          --launch-configuration-name ${{ secrets.BACKEND_LAUNCH_CONFIG }} \
-          --region us-east-1
+          --auto-scaling-group-name ${{ secrets.FRONTEND_ASG_NAME }} \
+          --launch-template "LaunchTemplateName=frontend-launch-config,Version=$Latest"
+
+        aws ec2 describe-instances --query "Reservations[*].Instances[*].InstanceId" --filters "Name=subnet-id,Values=subnet-0389c2e9fb853f5c2" --output text | \
+          xargs -I {} aws ec2 terminate-instances --instance-ids {}
