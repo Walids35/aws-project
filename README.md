@@ -38,6 +38,9 @@ This project involved designing, implementing, and deploying a scalable, fault-t
   - Configured an S3 bucket with proper permissions to store access logs.
 - **Automation with AWS Lambda:**
   - Set up Lambda functions to monitor specific conditions (e.g., high CPU usage) and trigger remediation actions, such as scaling or instance reboot.
+- **Dashboard Setup**
+
+  ![CloudWatch Dashboard](images/CloudWatch-Dashboard.png)
 
 ---
 
