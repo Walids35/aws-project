@@ -3,7 +3,7 @@
 ## **Overview**
 This project involved designing, implementing, and deploying a scalable, fault-tolerant, and highly available cloud-based application using AWS. The infrastructure includes a frontend hosted in a public subnet, a backend hosted in a private subnet, and integration with AWS services for monitoring, logging, and automation. The application is containerized, and CI/CD pipelines are utilized for streamlined deployments.
 
-![AWS Architecture Diagram](images/AWS-Architecture.jpg)
+![AWS Architecture Diagram](images/AWS.png)
 ---
 
 ## **Objectives**
